@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント定員監視システム</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔔</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 イベント定員監視システム</h1>
+            <p>Gassyoh スピーカーが2台あり MEGAMIX Release Party の定員状況を監視中</p>
+        </header>
+
+        <main>
+            <!-- 現在の状況 -->
+            <section class="status-card">
+                <h2>📊 現在の定員状況</h2>
+                <div id="current-status" class="status-info">
+                    <div class="loading">データを読み込み中...</div>
+                </div>
+            </section>
+
+            <!-- 通知設定 -->
+            <section class="notification-card">
+                <h2>🔔 通知設定</h2>
+                <div class="notification-controls">
+                    <label class="switch">
+                        <input type="checkbox" id="browser-notifications">
+                        <span class="slider"></span>
+                        ブラウザ通知
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="sound-alerts">
+                        <span class="slider"></span>
+                        音声アラート
+                    </label>
+                    <button id="test-notification" class="btn btn-secondary">通知テスト</button>
+                </div>
+            </section>
+
+            <!-- 監視履歴 -->
+            <section class="history-card">
+                <h2>📈 監視履歴</h2>
+                <div id="history-chart" class="chart-container">
+                    <canvas id="capacityChart" width="400" height="200"></canvas>
+                </div>
+                <div id="history-list" class="history-list"></div>
+            </section>
+
+            <!-- イベント情報 -->
+            <section class="event-info">
+                <h2>🎪 イベント詳細</h2>
+                <div class="event-details">
+                    <p><strong>イベント名:</strong> Gassyoh スピーカーが2台あり MEGAMIX Release Party 東京場所</p>
+                    <p><strong>開催日時:</strong> 2025年8月10日[日] 15:00</p>
+                    <p><strong>場所:</strong> 音楽喫茶 茶箱（早稲田）</p>
+                    <a href="https://twipla.jp/events/682940" target="_blank" rel="noopener" class="btn btn-primary">
+                        🎫 イベントページを開く
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                <span id="last-update">最終更新: --</span> | 
+                <span id="next-check">次回チェック: --</span>
+            </p>
+            <p>
+                <small>30分間隔で自動更新 | 
+                <a href="https://github.com/ktanifuji/event-capacity-monitor" target="_blank">
+                    📁 GitHub
+                </a>
+                </small>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

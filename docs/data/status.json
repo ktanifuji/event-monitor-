@@ -1,0 +1,14 @@
+{
+  "current": {
+    "timestamp": "2025-06-20T12:00:00.000Z",
+    "eventUrl": "https://twipla.jp/events/682940",
+    "currentParticipants": 42,
+    "maxCapacity": 42,
+    "availableSlots": 0,
+    "isFull": true,
+    "lastChecked": "初期データ - 実際の監視開始後に更新されます"
+  },
+  "previous": null,
+  "lastUpdate": "2025-06-20T12:00:00.000Z",
+  "history": []
+}

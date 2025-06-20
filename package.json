@@ -1,0 +1,37 @@
+{
+  "name": "event-capacity-monitor",
+  "version": "1.0.0",
+  "description": "イベント定員監視・通知アプリ - Twipla.jpのイベント定員をGitHub Actionsで自動監視し、空きが出た際に通知するWebアプリ",
+  "main": "scripts/monitor.js",
+  "scripts": {
+    "monitor": "node scripts/monitor.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "serve": "npx http-server docs -p 8080"
+  },
+  "keywords": [
+    "event",
+    "monitoring",
+    "notification",
+    "twipla",
+    "github-actions",
+    "web-scraping"
+  ],
+  "author": "ktanifuji",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "@octokit/rest": "^20.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ktanifuji/event-capacity-monitor.git"
+  },
+  "homepage": "https://ktanifuji.github.io/event-capacity-monitor",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
